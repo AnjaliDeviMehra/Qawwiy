@@ -1,0 +1,148 @@
+@use "../../styles/mixins.scss" as *;
+
+.mobile-nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.2rem 0.2rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 2;
+
+  @include tablet {
+    align-items: center;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &__menu {
+    height: 2rem;
+    width: 2rem;
+
+    @include tablet {
+      margin-right: 1rem;
+    }
+  }
+  &__logo {
+    width: 20vw;
+    height: auto;
+
+    @include tablet {
+      width: 15vw;
+      height: 3rem;
+    }
+  }
+  &__overlay {
+    background-color: #20142c;
+    position: fixed;
+    width: 90%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    color: white;
+    font-size: 1rem;
+
+    @include tablet {
+      width: 30%;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-bottom: 0.5px solid gray;
+    margin: 1rem 2rem;
+  }
+  &__overlay-hidden {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-top: 15vh;
+  }
+  &__close {
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    top: 2rem;
+    right: 15%;
+
+    @include tablet {
+      top: 2rem;
+      left: 20%;
+    }
+  }
+}
+
+.desktop-nav {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.2px solid gainsboro;
+
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
+  }
+
+  &__link {
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    margin-left: 4rem;
+    text-underline-offset: 0.2rem;
+  }
+
+  &__link:hover {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  &__section-one {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 15vw;
+    height: 5rem;
+  }
+  &__phone {
+    display: inline;
+    color: black;
+    font-size: 1.5rem;
+    padding-right: 2rem;
+  }
+  &__phone:hover {
+    font-size: 1.7rem;
+  }
+  &__call {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  &__section-two {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,58 @@
+@use "../../styles/mixins.scss" as *;
+
+.footer {
+  background-color: black;
+  padding-top: 1rem;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  &__logo {
+    width: 10rem;
+    height: auto;
+  }
+
+  &__section-one {
+    @include tablet {
+      width: 45%;
+    }
+  }
+  &__tagline {
+    padding: 0 1.5rem;
+    font-size: 0.8rem;
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+}
+
+.contact {
+  padding: 1rem 1.5rem;
+  @include tablet {
+    width: 45%;
+  }
+
+  &__heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+    padding-bottom: 1rem;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: auto;
+    margin-right: 0.3rem;
+  }
+}
